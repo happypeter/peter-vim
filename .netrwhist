@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/peter/edocs/plaintext/vi'
+let g:netrw_dirhist_2='/home/peter/edocs/plaintext/bash'
+let g:netrw_dirhist_3='/home/peter/edocs/plaintext'
+let g:netrw_dirhist_4='/home/peter/edocs'
+let g:netrw_dirhist_5='/home/peter/edocs/code'
+let g:netrw_dirhist_6='/home/peter/gitbro/wiki/qt'
+let g:netrw_dirhist_7='/home/peter/edocs'

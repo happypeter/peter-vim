@@ -1,0 +1,11 @@
+*vim-peter*
+
+hello
+
+*dict*
+
+this is peter's dict
+
+*'dict'*
+
+peter here
