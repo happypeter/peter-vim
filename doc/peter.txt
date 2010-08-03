@@ -1,11 +1,6 @@
-*vim-peter*
+*peter-note*
 
-hello
+some people use *etckeeper* to trace the chnages in /etc/, so that inspired me
+to track my .vim/ with git
 
-*dict*
 
-this is peter's dict
-
-*'dict'*
-
-peter here
