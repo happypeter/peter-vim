@@ -42,7 +42,6 @@
 'Tlist_Use_SingleClick'	taglist.txt	/*'Tlist_Use_SingleClick'*
 'Tlist_WinHeight'	taglist.txt	/*'Tlist_WinHeight'*
 'Tlist_WinWidth'	taglist.txt	/*'Tlist_WinWidth'*
-'dict'	peter.txt	/*'dict'*
 'loaded_nerd_tree'	NERD_tree.txt	/*'loaded_nerd_tree'*
 'snippets'	snipMate.txt	/*'snippets'*
 .snippet	snipMate.txt	/*.snippet*
@@ -221,7 +220,6 @@ b:match_wholeBR	matchit.txt	/*b:match_wholeBR*
 b:match_word	matchit.txt	/*b:match_word*
 b:match_words	matchit.txt	/*b:match_words*
 cvscommand-changes	vcscommand.txt	/*cvscommand-changes*
-dict	peter.txt	/*dict*
 drawit	DrawIt.txt	/*drawit*
 drawit-a	DrawIt.txt	/*drawit-a*
 drawit-b	DrawIt.txt	/*drawit-b*
@@ -249,6 +247,7 @@ drawit-stop	DrawIt.txt	/*drawit-stop*
 drawit-usage	DrawIt.txt	/*drawit-usage*
 drawit-visblock	DrawIt.txt	/*drawit-visblock*
 drawit.txt	DrawIt.txt	/*drawit.txt*
+etckeeper	peter.txt	/*etckeeper*
 g%	matchit.txt	/*g%*
 g:drawit_insertmode	DrawIt.txt	/*g:drawit_insertmode*
 g:snippets_dir	snipMate.txt	/*g:snippets_dir*
@@ -284,6 +283,7 @@ multi_snip	snipMate.txt	/*multi_snip*
 o_[%	matchit.txt	/*o_[%*
 o_]%	matchit.txt	/*o_]%*
 o_g%	matchit.txt	/*o_g%*
+peter-note	peter.txt	/*peter-note*
 snipMate	snipMate.txt	/*snipMate*
 snipMate-$#	snipMate.txt	/*snipMate-$#*
 snipMate-${#:}	snipMate.txt	/*snipMate-${#:}*
@@ -349,4 +349,3 @@ vcscommand-ssh-other	vcscommand.txt	/*vcscommand-ssh-other*
 vcscommand-ssh-wrapper	vcscommand.txt	/*vcscommand-ssh-wrapper*
 vcscommand-statusline	vcscommand.txt	/*vcscommand-statusline*
 vcscommand.txt	vcscommand.txt	/*vcscommand.txt*
-vim-peter	peter.txt	/*vim-peter*
