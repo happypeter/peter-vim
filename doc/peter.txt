@@ -3,4 +3,9 @@
 some people use *etckeeper* to trace the chnages in /etc/, so that inspired me
 to track my .vim/ with git
 
+Now I know how to mv my .vimrc into .vim/ to do version control
 
+    1. cp .vimrc .vim/vimrc, and now we can run "git add vimrc" inside .vim/
+    2. open .vimrc
+    3. run the command "ggdGa runtime vimrc", delete everything in .vimrc and add "runtime vimrc" 
+    4. that is all
