@@ -175,4 +175,7 @@ set fillchars=""
 
 " Highlight all instances of the current word under the cursor
 nmap <silent> ^ :setl hls<CR>:let @/="<C-r><C-w>"<CR>
+" cd to the directory containing the file in the buffer
+nmap <silent> ,cd :lcd %:h<CR>
+nmap <silent> ,md :!mkdir -p %:p:h<CR>
 
