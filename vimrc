@@ -111,6 +111,7 @@ imap jj <esc>
 "             wildmode
 "
 """"""""""""""""""""""""""""""""""""""""
+" use <C-D> with this to get a list
 set wildmenu
 
 """"""""""""""""""""""""""""""""""""""""
@@ -168,7 +169,7 @@ set showcmd
 set scrolloff=8
 
 " Allow the cursor to go in to "invalid" places
-set virtualedit=all
+" set virtualedit=all
 
 " get rid of the silly characters in window separators
 set fillchars=""
