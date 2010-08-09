@@ -15,6 +15,7 @@ now I am start to edit this page by:
 
         :h peter-note
         :set ma " to make this page modifiable.
+        " it seems no  use to put "set ma" in to vimrc
 |test-tag|
 
 OK, now I see vim support inter-file link
