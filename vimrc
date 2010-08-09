@@ -21,7 +21,8 @@ map ,w :call Browser ()<CR>
 " with unsaved change 
 set hidden
 " I just use <Tab> to do buffernext, but need to make sure I am in Normal Mode
-" and I do use <Tab> for any other purposes in Normal Mode 
+" Taglist.vim use <Tab> in nomal mode for jumping among different filename in 
+" its own window, but I do not feel uncomfortable about this 
 map <Tab> :bn<CR>
 """"""""""""""""""""""""""""""""""""""""
 "
@@ -91,7 +92,9 @@ map ,f :q!<CR>
 "
 """"""""""""""""""""""""""""""""""""""""
 " I need a fake ~/.vimrc: runtime vimrc
-map ,v :vnew ~/.vim/vimrc<CR>
+" http://www.derekwyatt.org/vim/the-vimrc-file/my-vimrc-file/
+map ,ev :e ~/.vim/vimrc<CR>
+map ,sv :so ~/.vim/vimrc<CR>
 
 """"""""""""""""""""""""""""""""""""""""
 "
