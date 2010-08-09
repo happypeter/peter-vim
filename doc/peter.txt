@@ -9,9 +9,12 @@ Now I know how to mv my .vimrc into .vim/ to do version control
     2. open .vimrc
     3. run the command "ggdGa runtime vimrc", delete everything in .vimrc and add "runtime vimrc" 
     4. that is all
-
+|peter-edit-help|
 *peter-edit-help*
 now I am start to edit this page by:
 
         :h peter-note
         :set ma " to make this page modifiable.
+|test-tag|
+
+OK, now I see vim support inter-file link
