@@ -173,3 +173,6 @@ set virtualedit=all
 " get rid of the silly characters in window separators
 set fillchars=""
 
+" Highlight all instances of the current word under the cursor
+nmap <silent> ^ :setl hls<CR>:let @/="<C-r><C-w>"<CR>
+
