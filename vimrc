@@ -54,7 +54,7 @@ map ,t :Tlist<CR>
 
 """"""""""""""""""""""""""""""""""""""""
 "
-"             Doxgen
+"             Doxygen
 "
 """"""""""""""""""""""""""""""""""""""""
 " highlight the doxygen comments
