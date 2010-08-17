@@ -1,4 +1,4 @@
-*peter-note*
+## *peter-note*
 
 some people use *etckeeper* to trace the chnages in /etc/, so that inspired me
 to track my .vim/ with git
