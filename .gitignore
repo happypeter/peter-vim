@@ -3,3 +3,4 @@
 doc.trolltech.com
 ## all the zip package
 *.zip
+.netrwhist
