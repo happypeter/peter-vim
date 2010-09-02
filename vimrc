@@ -1,5 +1,15 @@
 """"""""""""""""""""""""""""""""""""""""
 "
+"             note-taking
+"
+""""""""""""""""""""""""""""""""""""""""
+" with Vim helptags and git, store things 
+" $VIMRUNTIME/doc
+autocmd BufRead ~/.vim/doc/* :set ma
+autocmd BufWritePost ~/.vim/doc/* :helptags ~/.vim/doc
+
+""""""""""""""""""""""""""""""""""""""""
+"
 "             brower
 "
 """"""""""""""""""""""""""""""""""""""""

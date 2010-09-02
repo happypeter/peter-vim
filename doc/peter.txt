@@ -19,3 +19,5 @@ now I am start to edit this page by:
 |test-tag|
 
 OK, now I see vim support inter-file link
+*peter-autocmd*
+check 
