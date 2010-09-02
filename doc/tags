@@ -283,7 +283,6 @@ multi_snip	snipMate.txt	/*multi_snip*
 o_[%	matchit.txt	/*o_[%*
 o_]%	matchit.txt	/*o_]%*
 o_g%	matchit.txt	/*o_g%*
-peter-cmd	peter.txt	/*peter-cmd*
 peter-edit-help	peter.txt	/*peter-edit-help*
 peter-note	peter.txt	/*peter-note*
 snipMate	snipMate.txt	/*snipMate*

@@ -15,7 +15,8 @@ filetype indent on
 """"""""""""""""""""""""""""""""""""""""
 " with Vim helptags and git, store things 
 " $VIMRUNTIME/doc
-autocmd FileType help set ma
+" NOTE: NO ":" in the following line, stange but works
+autocmd FileType help set ma 
 autocmd BufWritePost ~/.vim/doc/* :helptags ~/.vim/doc
 
 """"""""""""""""""""""""""""""""""""""""
