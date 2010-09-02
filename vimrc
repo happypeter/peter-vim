@@ -115,9 +115,7 @@ map ,f :q!<CR>
 " I need a fake ~/.vimrc: runtime vimrc
 " http://www.derekwyatt.org/vim/the-vimrc-file/my-vimrc-file/
 map ,ev :e ~/.vim/vimrc<CR>
-map ,sv :so ~/.vim/vimrc<CR>
 " When vimrc is edited, reload it
-" this means ,sv is not necessary 
 " copied from http://amix.dk/vim/vimrc.html
 autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
