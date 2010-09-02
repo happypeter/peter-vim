@@ -1,4 +1,4 @@
-let g:netrw_dirhistmax  =10
+iilet g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/peter/xxx/sudir'
 let g:netrw_dirhist_2='/home/peter/GitBeijing/_posts'

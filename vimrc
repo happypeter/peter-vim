@@ -1,11 +1,21 @@
 """"""""""""""""""""""""""""""""""""""""
 "
+"             filetype
+"
+""""""""""""""""""""""""""""""""""""""""
+" Enable filetype plugin
+filetype plugin on
+filetype indent on
+
+
+""""""""""""""""""""""""""""""""""""""""
+"
 "             note-taking
 "
 """"""""""""""""""""""""""""""""""""""""
 " with Vim helptags and git, store things 
 " $VIMRUNTIME/doc
-autocmd BufRead ~/.vim/doc/* :set ma
+autocmd FileType help set ma
 autocmd BufWritePost ~/.vim/doc/* :helptags ~/.vim/doc
 
 """"""""""""""""""""""""""""""""""""""""
