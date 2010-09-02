@@ -17,6 +17,7 @@ filetype indent on
 " $VIMRUNTIME/doc
 " NOTE: NO ":" in the following line, stange but works
 autocmd FileType help set ma 
+autocmd FileType help set noreadonly
 autocmd BufWritePost ~/.vim/doc/* :helptags ~/.vim/doc
 
 """"""""""""""""""""""""""""""""""""""""
