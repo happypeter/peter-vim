@@ -1,5 +1,28 @@
 """"""""""""""""""""""""""""""""""""""""
 "
+"             paste
+"
+""""""""""""""""""""""""""""""""""""""""
+map ,pp :setlocal paste!<cr>
+
+""""""""""""""""""""""""""""""
+"
+"         Vim grep
+"
+""""""""""""""""""""""""""""""
+let Grep_Skip_Dirs = '.git CVS SCCS .svn generated'
+set grepprg=/bin/grep\ -nH
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+"          Spell checking
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Pressing ,ss will toggle and untoggle spell checking
+map ,ss :setlocal spell!<cr>
+
+""""""""""""""""""""""""""""""""""""""""
+"
 "             filetype
 "
 """"""""""""""""""""""""""""""""""""""""
@@ -115,7 +138,7 @@ map ,f :q!<CR>
 """"""""""""""""""""""""""""""""""""""""
 " I need a fake ~/.vimrc: runtime vimrc
 " http://www.derekwyatt.org/vim/the-vimrc-file/my-vimrc-file/
-map ,ev :e ~/.vim/vimrc<CR>
+map ,e :e ~/.vim/vimrc<CR>
 " When vimrc is edited, reload it
 " copied from http://amix.dk/vim/vimrc.html
 autocmd! bufwritepost vimrc source ~/.vim/vimrc
