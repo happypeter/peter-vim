@@ -285,6 +285,7 @@ o_]%	matchit.txt	/*o_]%*
 o_g%	matchit.txt	/*o_g%*
 peter-edit-help	peter.txt	/*peter-edit-help*
 peter-note	peter.txt	/*peter-note*
+peter-vimrc-candidates	peter.txt	/*peter-vimrc-candidates*
 snipMate	snipMate.txt	/*snipMate*
 snipMate-$#	snipMate.txt	/*snipMate-$#*
 snipMate-${#:}	snipMate.txt	/*snipMate-${#:}*

@@ -1,4 +1,13 @@
+## *peter-vimrc-candidates*
+" Map space to / (search) and c-space to ? (backgwards search)
+map <space> /
+map <c-space> ?
+map <silent> <leader><cr> :noh<cr>
+
+" I can map <right> <light> to sth useful
+
 ## *peter-note*
+ 
 
 some people use *etckeeper* to trace the chnages in /etc/, so that inspired me
 to track my .vim/ with git

@@ -1,4 +1,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General Abbrevs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 "      Cope
 "      
@@ -39,7 +43,7 @@ map ,ss :setlocal spell!<cr>
 """"""""""""""""""""""""""""""""""""""""
 " Enable filetype plugin
 filetype plugin on
-filetype indent on
+" filetype indent on
 
 
 """"""""""""""""""""""""""""""""""""""""
@@ -80,6 +84,7 @@ set hidden
 " Taglist.vim use <Tab> in nomal mode for jumping among different filename in 
 " its own window, but I do not feel uncomfortable about this 
 map <Tab> :bn<CR>
+map ,bd :bd<cr>
 """"""""""""""""""""""""""""""""""""""""
 "
 "             formatting 
@@ -197,7 +202,7 @@ set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 """"""""""""""""""""""""""""""""""""""""
 " ic also has effect on dictionary settings
 set ic 
-set hlsearch
+"set hlsearch
 set incsearch
 
 """"""""""""""""""""""""""""""""""""""""
@@ -227,12 +232,12 @@ set textwidth=78
 " input abrevation 
 iab frm from 
 " set number for doing diffs and folding
-set nu
+" set nu
 " Show the current command in the lower right corner
 set showcmd
 " When the page starts to scroll, keep the cursor 8 lines from the top and 8
 " lines from the bottom
-set scrolloff=8
+" set scrolloff=8
 
 " Allow the cursor to go in to "invalid" places
 " set virtualedit=all
@@ -241,7 +246,7 @@ set scrolloff=8
 set fillchars=""
 
 " Highlight all instances of the current word under the cursor
-nmap <silent> ^ :setl hls<CR>:let @/="<C-r><C-w>"<CR>
+" nmap <silent> ^ :setl hls<CR>:let @/="<C-r><C-w>"<CR>
 " cd to the directory containing the file in the buffer
 nmap <silent> ,cd :lcd %:h<CR>
 nmap <silent> ,md :!mkdir -p %:p:h<CR>
