@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/peter/xxx/sudir'
-let g:netrw_dirhist_2='/home/peter/GitBeijing/_posts'
-let g:netrw_dirhist_3='/home/peter/gitbro/posts'
-let g:netrw_dirhist_4='/home/peter/happypeter.github.com/css'
-let g:netrw_dirhist_5='/home/peter/happypeter.github.com/_layouts'
-let g:netrw_dirhist_6='/home/peter/Github/GitBeijing.wiki/.git'
-let g:netrw_dirhist_7='/home/peter/hen/youku'
-let g:netrw_dirhist_8='/home/peter/axtu/_layouts'
-let g:netrw_dirhist_9='/home/peter/repo-farm/tata/_layouts'
+let g:netrw_dirhist_cnt =0
