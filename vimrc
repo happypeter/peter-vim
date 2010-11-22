@@ -19,6 +19,7 @@ map ,cp :cp<cr>
 "
 """"""""""""""""""""""""""""""""""""""""
 map ,pp :setlocal paste!<cr>
+set autoindent
 
 """"""""""""""""""""""""""""""
 "
@@ -58,6 +59,7 @@ autocmd FileType help set ma
 autocmd FileType help set noreadonly
 autocmd BufWritePost ~/.vim/doc/* :helptags ~/.vim/doc
 
+
 """"""""""""""""""""""""""""""""""""""""
 "
 "             brower
@@ -71,6 +73,22 @@ function! Browser ()
   exec "!firefox ".line
 endfunction
 map ,w :call Browser ()<CR>
+
+
+""""""""""""""""""""""""""""""""""""""""
+"
+"             open file
+"
+""""""""""""""""""""""""""""""""""""""""
+" xxx keyword|vim -s search.vim -
+" only works when the line has no garbage
+function! OpenFile ()
+  let line = getline (".")
+"  let line = matchstr (line, "\%(http://\|www\.\)[^ ,;\t]*")
+  exec "e ".line
+endfunction
+map ,r :call OpenFile ()<CR>
+
 
 """"""""""""""""""""""""""""""""""""""""
 "
