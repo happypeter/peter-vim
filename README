@@ -1,0 +1,6 @@
+the real .vimrc is actually the ./vimrc 
+
+you need to have a fake .vimrc in your $HOME
+with only this line in it:
+
+    runtime vimrc
