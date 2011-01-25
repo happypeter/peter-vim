@@ -352,3 +352,4 @@ vcscommand-ssh-other	vcscommand.txt	/*vcscommand-ssh-other*
 vcscommand-ssh-wrapper	vcscommand.txt	/*vcscommand-ssh-wrapper*
 vcscommand-statusline	vcscommand.txt	/*vcscommand-statusline*
 vcscommand.txt	vcscommand.txt	/*vcscommand.txt*
+vim-ex-tip	peter-note2.txt	/*vim-ex-tip*

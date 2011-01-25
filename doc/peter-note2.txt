@@ -1,2 +1,8 @@
 *test-tag*
 hi you
+
+*vim-ex-tip*
+find all line with ".com" and get <xx.com>
+:%g/.com/p|s/^/>
+:%g/.com/p|s/$/>
+
