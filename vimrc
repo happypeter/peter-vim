@@ -1,17 +1,8 @@
-
-""""""""""""""""""""""""""""""""""""""""
-"
-"             for macbook
-"
-""""""""""""""""""""""""""""""""""""""""
-syntax on
-set hlsearch
-colorscheme ir_black
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General Abbrevs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 "      Cope
@@ -84,7 +75,6 @@ function! Browser ()
 endfunction
 map ,w :call Browser ()<CR>
 
-
 """"""""""""""""""""""""""""""""""""""""
 "
 "             open file
@@ -99,7 +89,6 @@ function! OpenFile ()
 endfunction
 map ,r :call OpenFile ()<CR>
 
-
 """"""""""""""""""""""""""""""""""""""""
 "
 "             buffers
@@ -113,6 +102,7 @@ set hidden
 " its own window, but I do not feel uncomfortable about this 
 map <Tab> :bn<CR>
 map ,bd :bd<cr>
+
 """"""""""""""""""""""""""""""""""""""""
 "
 "             formatting 
@@ -120,6 +110,7 @@ map ,bd :bd<cr>
 """"""""""""""""""""""""""""""""""""""""
 " this is for C comments, see *fo-table* to know what althese options mean
 set fo=croq
+
 """"""""""""""""""""""""""""""""""""""""
 "
 "             general
@@ -223,6 +214,7 @@ set tabstop=4
 " i_CTRL_X_K 
 set dictionary+=~/.vim/dict/simple
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
+
 """"""""""""""""""""""""""""""""""""""""
 "
 "             Search
@@ -278,14 +270,10 @@ set fillchars=""
 " cd to the directory containing the file in the buffer
 nmap <silent> ,cd :lcd %:h<CR>
 nmap <silent> ,md :!mkdir -p %:p:h<CR>
+
 """"""""""""""""""""""""""""""""""""""""
 "
 "             test stuff
-"
-""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""
-"
-"             ,
 "
 """"""""""""""""""""""""""""""""""""""""
 nnoremap <c-e> ,
