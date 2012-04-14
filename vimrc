@@ -77,20 +77,6 @@ map ,w :call Browser ()<CR>
 
 """"""""""""""""""""""""""""""""""""""""
 "
-"             open file
-"
-""""""""""""""""""""""""""""""""""""""""
-" xxx keyword|vim -s search.vim -
-" only works when the line has no garbage
-function! OpenFile ()
-  let line = getline (".")
-"  let line = matchstr (line, "\%(http://\|www\.\)[^ ,;\t]*")
-  exec "e ".line
-endfunction
-map ,r :call OpenFile ()<CR>
-
-""""""""""""""""""""""""""""""""""""""""
-"
 "             buffers
 "
 """"""""""""""""""""""""""""""""""""""""
