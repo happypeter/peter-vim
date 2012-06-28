@@ -19,7 +19,8 @@ map ,cp :cp<cr>
 "             paste
 "
 """"""""""""""""""""""""""""""""""""""""
-map ,pp :setlocal paste!<cr>
+" for insert mode
+set pastetoggle=<f2>
 set autoindent
 
 """"""""""""""""""""""""""""""
