@@ -217,8 +217,7 @@ set incsearch
 "             status line
 "
 """"""""""""""""""""""""""""""""""""""""
-" Set the status line the way i like it
-set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n\ [%b][0x%B]
+set statusline=%F:\ %l
 
 " tell VIM to always put a status line in, even if there is only one window
 " this means I can also see what is the filename I am in, finally!
