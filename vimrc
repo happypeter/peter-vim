@@ -3,61 +3,66 @@
 "             pathogen
 "
 """"""""""""""""""""""""""""""""""""""""
-call pathogen#infect()
+
+  call pathogen#infect()
 
 """"""""""""""""""""""""""""""""""""""""
 "
 "             ack
 "
 """"""""""""""""""""""""""""""""""""""""
-map ,k :Ack <cword><ENTER>
 
-set isk+=-
+  map ,k :Ack <cword><ENTER>
+
 
 """"""""""""""""""""""""""""""""""""""""
 "
 "             EOL whitespace
 "
 """"""""""""""""""""""""""""""""""""""""
-set list
-set listchars=trail:+
+
+  set list
+  set listchars=trail:+
 
 """"""""""""""""""""""""""""""""""""""""
 "
 "             fuzzfinder
 "
 """"""""""""""""""""""""""""""""""""""""
-map ,,  :FufCoverageFile!<cr>
-" exclude is very dangerous, cause once you exclude sth, you can not add it in
-" FufAddPath(), 
-" for example if I exclude "tmp" here, I can not add anything with "tmp" as
-" its path, like "hello.tmp/", "/home/peter/tmp/**/*"
-" better to use g:fuf_coveragefile_globPatterns
-let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(tmp|db/migrate)'
-let g:fuf_enumeratingLimit = 500
-let g:fuf_coveragefile_prompt = '=>'
 
-function! FufAddPath(newpath)
-  call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns', g:fuf_coveragefile_globPatterns + [a:newpath]])
-endfunction
-"" e.g :call FufAddPath('/home/peter/xxx/ideas/**/*')
+  map ,,  :FufCoverageFile!<cr>
+  " exclude is very dangerous, cause once you exclude sth, you can not add it in
+  " FufAddPath(), 
+  " for example if I exclude "tmp" here, I can not add anything with "tmp" as
+  " its path, like "hello.tmp/", "/home/peter/tmp/**/*"
+  " better to use g:fuf_coveragefile_globPatterns
+  let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(tmp|db/migrate)'
+  let g:fuf_enumeratingLimit = 500
+  let g:fuf_coveragefile_prompt = '=>'
+
+  function! FufAddPath(newpath)
+    call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns', g:fuf_coveragefile_globPatterns + [a:newpath]])
+  endfunction
+  "" e.g :call FufAddPath('/home/peter/xxx/ideas/**/*')
 
 """"""""""""""""""""""""""""""""""""""""
 "
 "             paste
 "
 """"""""""""""""""""""""""""""""""""""""
-" for insert mode
-set pastetoggle=<f2>
+
+  " for insert mode
+  set pastetoggle=<f2>
 
 """"""""""""""""""""""""""""""""""""""""
 "
 "             filetype
 "
 """"""""""""""""""""""""""""""""""""""""
-" Enable filetype plugin
-" for i_Ctrl-X_Ctrl-O
-filetype plugin on
+
+  " Enable filetype plugin
+  " for i_Ctrl-X_Ctrl-O
+  filetype plugin on
 
 """"""""""""""""""""""""""""""""""""""""
 "
@@ -65,48 +70,48 @@ filetype plugin on
 "
 """"""""""""""""""""""""""""""""""""""""
 
-" check :h filetype-indent-on
-" have proper indent level based on syntax
-filetype indent on
+  " check :h filetype-indent-on
+  " have proper indent level based on syntax
+  filetype indent on
 
-" if you use <tab> to indent the code
-" vim use tabs other than spaces for the indentaion
-" expandtab will turn a tab into "tabstop" spaces
-set expandtab
-set tabstop=2
+  " if you use <tab> to indent the code
+  " vim use tabs other than spaces for the indentaion
+  " expandtab will turn a tab into "tabstop" spaces
+  set expandtab
+  set tabstop=2
 
 
-" if you use ">" or "<c-t> to indent the code, this matters
-" this default to 8
-set shiftwidth=2
+  " if you use ">" or "<c-t> to indent the code, this matters
+  " this default to 8
+  set shiftwidth=2
 
-" you can also set different indent level for other languages
-autocmd FileType c setlocal shiftwidth=4 tabstop=4
+  " you can also set different indent level for other languages
+  autocmd FileType c setlocal shiftwidth=4 tabstop=4
 
 """"""""""""""""""""""""""""""""""""""""
 "
 "             buffers
 "
 """"""""""""""""""""""""""""""""""""""""
-set hidden "in order to switch between buffers with unsaved change 
-map <s-tab> :bp<cr>
-map <tab> :bn<cr>
-map ,bd :bd<cr>
 
+  set hidden "in order to switch between buffers with unsaved change 
+  map <s-tab> :bp<cr>
+  map <tab> :bn<cr>
+  map ,bd :bd<cr>
 
 """"""""""""""""""""""""""""""""""""""""
 "
-"             general
+"     why I use *,* to do mapping?
 "
 """"""""""""""""""""""""""""""""""""""""
-" why I use *,* to do mapping?
-" inspired by Derek, the reasons:
-" 1. <LEADER> is too long to type
-" 2. *,* is easier to reach than *\*
-" 3. in practice you nerver type in *,v*, but *, v*
-" Derek also do a nomap for *,*
-"   nnomap <c-e> ,
-" I do not do it, since I do not use *,* as a command a lot
+
+  " inspired by Derek, the reasons:
+  " 1. <LEADER> is too long to type
+  " 2. *,* is easier to reach than *\*
+  " 3. in practice you nerver type in *,v*, but *, v*
+  " Derek also do a nomap for *,*
+  "   nnomap <c-e> ,
+  " I do not do it, since I do not use *,* as a command a lot
 
 
 """"""""""""""""""""""""""""""""""""""""
@@ -114,19 +119,21 @@ map ,bd :bd<cr>
 "             quit quickly
 "
 """"""""""""""""""""""""""""""""""""""""
-map ,f :q!<CR>
+
+  map ,f :q!<CR>
 
 """"""""""""""""""""""""""""""""""""""""
 "
 "             vimrc editing
 "
 """"""""""""""""""""""""""""""""""""""""
-" I need a fake ~/.vimrc: runtime vimrc
-" http://www.derekwyatt.org/vim/the-vimrc-file/my-vimrc-file/
-map ,e :e ~/.vim/vimrc<CR>
-" When vimrc is edited, reload it
-" copied from http://amix.dk/vim/vimrc.html
-autocmd! bufwritepost vimrc source ~/.vim/vimrc
+
+  " I need a fake ~/.vimrc: runtime vimrc
+  " http://www.derekwyatt.org/vim/the-vimrc-file/my-vimrc-file/
+  map ,e :e ~/.vim/vimrc<CR>
+  " When vimrc is edited, reload it
+  " copied from http://amix.dk/vim/vimrc.html
+  autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
 
 """"""""""""""""""""""""""""""""""""""""
@@ -134,69 +141,76 @@ autocmd! bufwritepost vimrc source ~/.vim/vimrc
 "            quick escape
 "
 """"""""""""""""""""""""""""""""""""""""
-" set quick escape from insert mode, and now I can go without arrow keys and
-" use j and k to move around in insert mode
-imap jj <esc>
+
+  " set quick escape from insert mode, and now I can go without arrow keys and
+  " use j and k to move around in insert mode
+  imap jj <esc>
 
 """"""""""""""""""""""""""""""""""""""""
 "
 "             wildmode
 "
 """"""""""""""""""""""""""""""""""""""""
-" use <C-D> with this to get a list
-set wildmenu
 
+  " use <C-D> with this to get a list
+  set wildmenu
 
 """"""""""""""""""""""""""""""""""""""""
 "
 "             dictionary
 "
 """"""""""""""""""""""""""""""""""""""
-" i_CTRL_X_K 
-set dictionary+=~/.vim/dict/simple
-set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
+
+  " i_CTRL_X_K
+  set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 
 """"""""""""""""""""""""""""""""""""""""
 "
 "             Search
 "
 """"""""""""""""""""""""""""""""""""""""
-" ic also has effect on dictionary settings
-set ic
-"set hlsearch
-set incsearch
+
+  " ic also has effect on dictionary settings
+  set ic
+  "set hlsearch
+  set incsearch
 
 """"""""""""""""""""""""""""""""""""""""
 "
 "             status line
 "
 """"""""""""""""""""""""""""""""""""""""
-" Set the status line the way i like it
-set statusline=%F:\ %l
 
-" tell VIM to always put a status line in, even if there is only one window
-" this means I can also see what is the filename I am in, finally!
-set laststatus=2
+  " Set the status line the way i like it
+  set statusline=%F:\ %l
+
+  " tell VIM to always put a status line in, even if there is only one window
+  " this means I can also see what is the filename I am in, finally!
+  set laststatus=2
 
 """"""""""""""""""""""""""""""""""""""""
 "
 "             misc
 "
 """"""""""""""""""""""""""""""""""""""""
-" have nice $ sign when you use `cw`
-set cpoptions+=$
 
-" Do not know how to use autocmd yet, so the following line not working
-" autocmd FileType text setlocal textwidth=78
-set textwidth=78
+  " have nice $ sign when you use `cw`
+  set cpoptions+=$
+
+  " Do not know how to use autocmd yet, so the following line not working
+  " autocmd FileType text setlocal textwidth=78
+  set textwidth=78
 
 
-" get rid of the silly characters in window separators
-set fillchars=""
+  " get rid of the silly characters in window separators
+  set fillchars=""
 
-" Highlight all instances of the current word under the cursor
-" nmap <silent> ^ :setl hls<CR>:let @/="<C-r><C-w>"<CR>
-" cd to the directory containing the file in the buffer
-nmap <silent> ,cd :lcd %:h<CR>
-nmap <silent> ,md :!mkdir -p %:p:h<CR>
+  " hello-world is not one world
+  set isk+=-
+
+  " Highlight all instances of the current word under the cursor
+  " nmap <silent> ^ :setl hls<CR>:let @/="<C-r><C-w>"<CR>
+  " cd to the directory containing the file in the buffer
+  nmap <silent> ,cd :lcd %:h<CR>
+  nmap <silent> ,md :!mkdir -p %:p:h<CR>
 
