@@ -1,3 +1,5 @@
+# Nerdcommenter is better than comment.vim
+command.vim doesnot even support .vimrc .html
 ## *peter-vimrc-candidates*
 " Map space to / (search) and c-space to ? (backgwards search)
 map <space> /
@@ -6,7 +8,7 @@ map <silent> <leader><cr> :noh<cr>
 
 " I can map <right> <light> to sth useful
 
-## *peter-note*
+*PETERNOTE*
  
 
 some people use *etckeeper* to trace the chnages in /etc/, so that inspired me

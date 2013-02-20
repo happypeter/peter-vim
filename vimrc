@@ -1,18 +1,46 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General Abbrevs
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-ia xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""
 "
-"      Cope
-"      
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Do :help cope if you are unsure what cope is. It's super useful!
-" can be used with vimgrep or anything in quickfix
-map ,cc :botright cope<cr>
-map ,cn :cn<cr>
-map ,cp :cp<cr>
+"             pathogen
+"
+""""""""""""""""""""""""""""""""""""""""
+call pathogen#infect()
+
+""""""""""""""""""""""""""""""""""""""""
+"
+"             ack
+"
+""""""""""""""""""""""""""""""""""""""""
+map ,k :Ack <cword><ENTER>
+
+set isk+=-
+
+""""""""""""""""""""""""""""""""""""""""
+"
+"             EOL whitespace
+"
+""""""""""""""""""""""""""""""""""""""""
+set list
+set listchars=trail:+
+
+""""""""""""""""""""""""""""""""""""""""
+"
+"             fuzzfinder
+"
+""""""""""""""""""""""""""""""""""""""""
+map ,,  :FufCoverageFile!<cr>
+" exclude is very dangerous, cause once you exclude sth, you can not add it in
+" FufAddPath(), 
+" for example if I exclude "tmp" here, I can not add anything with "tmp" as
+" its path, like "hello.tmp/", "/home/peter/tmp/**/*"
+" better to use g:fuf_coveragefile_globPatterns
+let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(tmp|db/migrate)'
+let g:fuf_enumeratingLimit = 500
+let g:fuf_coveragefile_prompt = '=>'
+
+function! FufAddPath(newpath)
+  call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns', g:fuf_coveragefile_globPatterns + [a:newpath]])
+endfunction
+"" e.g :call FufAddPath('/home/peter/xxx/ideas/**/*')
 
 """"""""""""""""""""""""""""""""""""""""
 "
@@ -21,23 +49,6 @@ map ,cp :cp<cr>
 """"""""""""""""""""""""""""""""""""""""
 " for insert mode
 set pastetoggle=<f2>
-set autoindent
-
-""""""""""""""""""""""""""""""
-"
-"         Vim grep
-"
-""""""""""""""""""""""""""""""
-let Grep_Skip_Dirs = '.git CVS SCCS .svn generated'
-set grepprg=/bin/grep\ -nH
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
-"          Spell checking
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Pressing ,ss will toggle and untoggle spell checking
-map ,ss :setlocal spell!<cr>
 
 """"""""""""""""""""""""""""""""""""""""
 "
@@ -45,54 +56,32 @@ map ,ss :setlocal spell!<cr>
 "
 """"""""""""""""""""""""""""""""""""""""
 " Enable filetype plugin
+" for i_Ctrl-X_Ctrl-O
 filetype plugin on
-" filetype indent on
-
 
 """"""""""""""""""""""""""""""""""""""""
 "
-"             note-taking
+"             indent
 "
 """"""""""""""""""""""""""""""""""""""""
-" with Vim helptags and git, store things 
-" $VIMRUNTIME/doc
-" NOTE: NO ":" in the following line, stange but works
-autocmd FileType help set ma 
-autocmd FileType help set noreadonly
-autocmd BufWritePost ~/.vim/doc/* :helptags ~/.vim/doc
+filetype indent on
+set cindent
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
 
-""""""""""""""""""""""""""""""""""""""""
-"
-"             brower
-"
-""""""""""""""""""""""""""""""""""""""""
-" NOW Browser() only works for lines containing nothing but the link
-" refer to http://vim.wikia.com/wiki/VimTip306 
-function! Browser ()
-  let line = getline (".")
-"  let line = matchstr (line, "\%(http://\|www\.\)[^ ,;\t]*")
-  exec "!firefox ".line
-endfunction
-map ,w :call Browser ()<CR>
 
 """"""""""""""""""""""""""""""""""""""""
 "
 "             buffers
 "
 """"""""""""""""""""""""""""""""""""""""
-" in order to switch between buffers
-" with unsaved change 
-set hidden
-" I just use <Tab> to do buffernext, but need to make sure I am in Normal Mode
-" Taglist.vim use <Tab> in nomal mode for jumping among different filename in 
-" its own window, but I do not feel uncomfortable about this 
-map <Tab> :bn<CR>
+set hidden "in order to switch between buffers with unsaved change 
+map <s-tab> :bp<cr>
+map <tab> :bn<cr>
 map ,bd :bd<cr>
-
 """"""""""""""""""""""""""""""""""""""""
 "
-"             formatting 
+"             formatting
 "
 """"""""""""""""""""""""""""""""""""""""
 " this is for C comments, see *fo-table* to know what althese options mean
@@ -112,50 +101,17 @@ set fo=croq
 "   nnomap <c-e> ,
 " I do not do it, since I do not use *,* as a command a lot
 
-""""""""""""""""""""""""""""""""""""""""
-"
-"             taglist
-"
-""""""""""""""""""""""""""""""""""""""""
-"map ,t :Tlist<CR>
-
-""""""""""""""""""""""""""""""""""""""""
-"
-"             Doxygen
-"
-""""""""""""""""""""""""""""""""""""""""
-" highlight the doxygen comments
-" used with DoxygenToolkit.vim
-let g:load_doxygen_syntax=1
-
-""""""""""""""""""""""""""""""""""""""""
-"
-"             QT-doc
-"
-""""""""""""""""""""""""""""""""""""""""
-map ,k :!qref <cword><ENTER>
-
-""""""""""""""""""""""""""""""""""""""""
-"
-"             NERDtree
-"
-""""""""""""""""""""""""""""""""""""""""
-map ,n :NERDTreeToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""
 "
 "             quit quickly
 "
 """"""""""""""""""""""""""""""""""""""""
-" before I use <S-ZZ> to quit, this has the danger of unexpectedly
-" save some garbage editing, so I have a safer way now as below
-map ,, :q<CR>
-" force quit
 map ,f :q!<CR>
 
 """"""""""""""""""""""""""""""""""""""""
 "
-"             vimrc editing 
+"             vimrc editing
 "
 """"""""""""""""""""""""""""""""""""""""
 " I need a fake ~/.vimrc: runtime vimrc
@@ -168,12 +124,11 @@ autocmd! bufwritepost vimrc source ~/.vim/vimrc
 
 """"""""""""""""""""""""""""""""""""""""
 "
-"            quick escape  
+"            quick escape
 "
 """"""""""""""""""""""""""""""""""""""""
 " set quick escape from insert mode, and now I can go without arrow keys and
 " use j and k to move around in insert mode
-imap JJ <esc>
 imap jj <esc>
 
 """"""""""""""""""""""""""""""""""""""""
@@ -186,7 +141,7 @@ set wildmenu
 
 """"""""""""""""""""""""""""""""""""""""
 "
-"             tabbing 
+"             tabbing
 "
 """"""""""""""""""""""""""""""""""""""""
 set expandtab
@@ -208,7 +163,7 @@ set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 "
 """"""""""""""""""""""""""""""""""""""""
 " ic also has effect on dictionary settings
-set ic 
+set ic
 "set hlsearch
 set incsearch
 
@@ -217,6 +172,7 @@ set incsearch
 "             status line
 "
 """"""""""""""""""""""""""""""""""""""""
+" Set the status line the way i like it
 set statusline=%F:\ %l
 
 " tell VIM to always put a status line in, even if there is only one window
@@ -235,18 +191,6 @@ set cpoptions+=$
 " autocmd FileType text setlocal textwidth=78
 set textwidth=78
 
-" input abrevation 
-iab frm from 
-" set number for doing diffs and folding
-" set nu
-" Show the current command in the lower right corner
-set showcmd
-" When the page starts to scroll, keep the cursor 8 lines from the top and 8
-" lines from the bottom
-" set scrolloff=8
-
-" Allow the cursor to go in to "invalid" places
-" set virtualedit=all
 
 " get rid of the silly characters in window separators
 set fillchars=""
@@ -257,10 +201,3 @@ set fillchars=""
 nmap <silent> ,cd :lcd %:h<CR>
 nmap <silent> ,md :!mkdir -p %:p:h<CR>
 
-""""""""""""""""""""""""""""""""""""""""
-"
-"             test stuff
-"
-""""""""""""""""""""""""""""""""""""""""
-nnoremap <c-e> ,
-vnoremap <c-e> ,
