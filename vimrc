@@ -64,11 +64,24 @@ filetype plugin on
 "             indent
 "
 """"""""""""""""""""""""""""""""""""""""
+
+" check :h filetype-indent-on
+" have proper indent level based on syntax
 filetype indent on
-set cindent
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
+
+" if you use <tab> to indent the code
+" vim use tabs other than spaces for the indentaion
+" expandtab will turn a tab into "tabstop" spaces
+set expandtab
+set tabstop=2
 
 
+" if you use ">" or "<c-t> to indent the code, this matters
+" this default to 8
+set shiftwidth=2
+
+" you can also set different indent level for other languages
+autocmd FileType c setlocal shiftwidth=4 tabstop=4
 
 """"""""""""""""""""""""""""""""""""""""
 "
@@ -79,13 +92,7 @@ set hidden "in order to switch between buffers with unsaved change
 map <s-tab> :bp<cr>
 map <tab> :bn<cr>
 map ,bd :bd<cr>
-""""""""""""""""""""""""""""""""""""""""
-"
-"             formatting
-"
-""""""""""""""""""""""""""""""""""""""""
-" this is for C comments, see *fo-table* to know what althese options mean
-set fo=croq
+
 
 """"""""""""""""""""""""""""""""""""""""
 "
@@ -139,14 +146,6 @@ imap jj <esc>
 " use <C-D> with this to get a list
 set wildmenu
 
-""""""""""""""""""""""""""""""""""""""""
-"
-"             tabbing
-"
-""""""""""""""""""""""""""""""""""""""""
-set expandtab
-set shiftwidth=4
-set tabstop=4
 
 """"""""""""""""""""""""""""""""""""""""
 "
