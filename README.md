@@ -1,7 +1,7 @@
-## Who will love this?
-If you are a web developer, like me...
+### Who will love this?
+If you do web dev a lot, and if you use vim a lot.
 
-## Install
+### Install
 1. clone the repo
 
         git clone git://github.com/happypeter/peter-vim.git
@@ -18,6 +18,6 @@ If you are a web developer, like me...
 
         sudo apt-get install exuberant-ctags # for ubuntu
 
-## Video about how I manage my plugins
+1. Video about how I manage my plugins
 
-[vim plugin manage](http://happycasts.net/episodes/30)
+   - [vim plugin manage](http://happycasts.net/episodes/30)
