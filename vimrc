@@ -69,6 +69,11 @@
 "             indent
 "
 """"""""""""""""""""""""""""""""""""""""
+  " visually displaying indent levels in Vim
+  let g:indent_guides_auto_colors = 0
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+  map ,ig <leader>ig<cr>
 
   " check :h filetype-indent-on
   " have proper indent level based on syntax
