@@ -20,7 +20,8 @@
 "             ack
 "
 """"""""""""""""""""""""""""""""""""""""
-
+  
+  " sudo apt-get install ack-grep, on ubuntu box
   map ,k :Ack <cword><ENTER>
 
 
@@ -29,7 +30,8 @@
 "             EOL whitespace
 "
 """"""""""""""""""""""""""""""""""""""""
-
+  
+  " now if you have spaces at end of lines, you get notified
   set list
   set listchars=trail:+
 
@@ -219,7 +221,7 @@
   " get rid of the silly characters in window separators
   set fillchars=""
 
-  " hello-world is not one world
+  " hello-world is now one world
   set isk+=-
 
   " Highlight all instances of the current word under the cursor
