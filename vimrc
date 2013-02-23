@@ -1,3 +1,12 @@
+"""""""""""""""""""""""""""""""""""""""""
+"
+"       rails.vim
+"
+""""""""""""""""""""""""""""""""""""""""
+  " I don't use Rcontroller... stuff a lot
+  " cause I have fuzzyfinder, but rails.vim provide me `gf` for rails
+  " which is sth I miss.
+
 """"""""""""""""""""""""""""""""""""""""
 "
 "       for Mac
