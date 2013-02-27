@@ -106,12 +106,12 @@
 
   " if you use <tab> to indent the code
   " vim use tabs other than spaces for the indentaion
-  " expandtab will turn a tab into "tabstop" spaces
+  " expandtab will turn a tab into 'tabstop' spaces
   set expandtab
   set tabstop=2
 
 
-  " if you use ">" or "<c-t> to indent the code, this matters
+  " if you use '>' or <c-t> to indent the code, this matters
   " this default to 8
   set shiftwidth=2
 
