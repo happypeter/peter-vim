@@ -4,8 +4,7 @@
 "
 """"""""""""""""""""""""""""""""""""""""
   " I don't use Rcontroller... stuff a lot
-  " cause I have fuzzyfinder, but rails.vim provide me `gf` for rails
-  " which is sth I miss.
+  " cause I have fuzzyfinder, but rails.vim provide me `gf` for rails projects
 
 """"""""""""""""""""""""""""""""""""""""
 "
@@ -22,6 +21,7 @@
 "
 """"""""""""""""""""""""""""""""""""""""
 
+  " doorkeeper of all my vim plugins
   call pathogen#infect()
 
 """"""""""""""""""""""""""""""""""""""""
@@ -29,7 +29,7 @@
 "             ack
 "
 """"""""""""""""""""""""""""""""""""""""
-  
+
   " sudo apt-get install ack-grep, on ubuntu box
   map ,k :Ack <cword><ENTER>
 
@@ -39,7 +39,7 @@
 "             EOL whitespace
 "
 """"""""""""""""""""""""""""""""""""""""
-  
+
   " now if you have spaces at end of lines, you get notified
   set list
   set listchars=trail:+
@@ -233,9 +233,6 @@
   " hello-world is now one world
   set isk+=-
 
-  " Highlight all instances of the current word under the cursor
-  " nmap <silent> ^ :setl hls<CR>:let @/="<C-r><C-w>"<CR>
   " cd to the directory containing the file in the buffer
+  " then you can :sh to get the terminal, create files or do anything
   nmap <silent> ,cd :lcd %:h<CR>
-  nmap <silent> ,md :!mkdir -p %:p:h<CR>
-
