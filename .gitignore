@@ -1,7 +1,2 @@
-doc/tags
 *.netrwhist
-## the Qt docs
-doc.trolltech.com
-## all the zip package
 *.zip
-.netrwhist
