@@ -102,6 +102,7 @@
 
   " check :h filetype-indent-on
   " have proper indent level based on syntax
+  " `=` also depends on this to work
   filetype indent on
 
   " if you use <tab> to indent the code
