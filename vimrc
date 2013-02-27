@@ -67,6 +67,7 @@
 
   " cd to the directory containing the file in the buffer
   " then you can :sh to get the terminal, create files or do anything
+  " after all things done, use `cd -` to go back to project root
   nmap <silent> ,cd :lcd %:h<CR>
 
 """"""""""""""""""""""""""""""""""""""""
