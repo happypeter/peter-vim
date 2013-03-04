@@ -1,5 +1,5 @@
 ### Who will love this?
-If you do web dev a lot, and if you use vim a lot.
+If you do web dev a lot...yes
 
 ### Install
 1. clone the repo
@@ -12,11 +12,11 @@ If you do web dev a lot, and if you use vim a lot.
 
 1. set up `~/.vimrc`, have a fake `.vimrc` in your `$HOME`
 
-        ln -s ~/vim /vimrc .vimrc
+        ln -s ~/.vim/vimrc ~/.vimrc
 
-1. you may also need to install `Ctags`
+1. you also need to install `Ctags`, `ack-grep`
 
-        sudo apt-get install exuberant-ctags # for ubuntu
+        sudo apt-get install exuberant-ctags ack-grep # for ubuntu
 
 1. Video about how I manage my plugins
 
