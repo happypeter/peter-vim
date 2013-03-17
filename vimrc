@@ -26,6 +26,16 @@
 
 """"""""""""""""""""""""""""""""""""""""
 "
+"       for markdown
+"
+""""""""""""""""""""""""""""""""""""""""
+
+  " when you have .md file, default ft=modula2, thus wrong highlighting
+  autocmd FileType modula2 set ft=
+
+
+""""""""""""""""""""""""""""""""""""""""
+"
 "             pathogen
 "
 """"""""""""""""""""""""""""""""""""""""
