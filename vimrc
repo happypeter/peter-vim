@@ -1,3 +1,17 @@
+"""""""""""""""""""""""""""""""""""""""""
+"
+"       CtrlP
+"
+""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_map = ',,'
+let g:ctrlp_open_multiple_files = 'v'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git)$',
+  \ 'file': '\v\.(log|jpg|png|jpeg)$',
+  \ }
+
 """"""""""""""""""""""""""""""""""""""""
 "
 "       auto-save
@@ -20,7 +34,7 @@ let g:auto_save = 1
 "
 """"""""""""""""""""""""""""""""""""""""
   " I don't use Rcontroller... stuff a lot
-  " cause I have fuzzyfinder, but rails.vim provide me `gf` for rails projects
+  " cause I have CtrlP, but rails.vim provide me `gf` for rails projects
 
 """"""""""""""""""""""""""""""""""""""""
 "
@@ -70,31 +84,6 @@ let g:auto_save = 1
   set list
   set listchars=trail:+
 
-""""""""""""""""""""""""""""""""""""""""
-"
-"             fuzzyfinder
-"
-""""""""""""""""""""""""""""""""""""""""
-
-  map ,,  :FufCoverageFile!<cr>
-  " exclude is very dangerous, cause once you exclude sth, you can not add it in
-  " FufAddPath(), 
-  " for example if I exclude 'tmp' here, I can not add anything with 'tmp' as
-  " its path, like 'hello.tmp/', '/home/peter/tmp/**/*'
-  " better to use g:fuf_coveragefile_globPatterns
-  let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(tmp|db/migrate)'
-  let g:fuf_enumeratingLimit = 500
-  let g:fuf_coveragefile_prompt = '=>'
-
-  function! FufAddPath(newpath)
-    call fuf#setOneTimeVariables(['g:fuf_coveragefile_globPatterns', g:fuf_coveragefile_globPatterns + [a:newpath]])
-  endfunction
-  "" e.g :call FufAddPath('/home/peter/xxx/ideas/**/*')
-
-  " cd to the directory containing the file in the buffer
-  " then you can :sh to get the terminal, create files or do anything
-  " after all things done, use `cd -` to go back to project root
-  nmap <silent> ,cd :lcd %:h<CR>
 
 """"""""""""""""""""""""""""""""""""""""
 "
@@ -260,3 +249,5 @@ let g:auto_save = 1
   " hello-world is now one world
   set isk+=-
 
+  " change cwd to current buffer
+  nmap <silent> ,cd :lcd %:h<CR>
