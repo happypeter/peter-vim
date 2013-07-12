@@ -5,6 +5,7 @@
 """"""""""""""""""""""""""""""""""""""""
 let g:ctrlp_map = ',,'
 let g:ctrlp_open_multiple_files = 'v'
+let g:ctrlp_by_filename = 1
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = {
