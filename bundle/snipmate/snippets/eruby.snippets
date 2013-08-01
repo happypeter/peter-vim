@@ -6,3 +6,17 @@ snippet ==
 	<%= ${1} %>
 snippet --
 	<% ${1:} %>
+snippet ul
+	<ul class="${1:name}">
+		<li class="${2:name}">${3:content}</li>
+		<li></li>
+	</ul>
+snippet p
+	<p>
+		${1}
+	</p>
+	${2}
+snippet span
+	<span class="${1:name}">
+		${2}
+	</span>
