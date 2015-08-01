@@ -51,6 +51,7 @@ snippet doct5
 	<!DOCTYPE HTML>
 # XHTML Doctype 1.0 Frameset
 snippet html
+	<!DOCTYPE HTML>
 	<html>
 	${1}
 	</html>
@@ -60,8 +61,7 @@ snippet body
 	</body>
 snippet head
 	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8"`Close()`>
-
+		<meta charset='utf-8'>
 		<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
 		${2}
 	</head>
@@ -109,7 +109,7 @@ snippet input
 snippet label
 	<label for="${2:$1}">${1:name}</label><input type="${3:text/submit/hidden/button}" name="${4:$2}" value="${5}" id="${6:$2}"`Close()`>${7}
 snippet link
-	<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}" charset="utf-8"`Close()`>${4}
+	<link rel="stylesheet" href="${1:css/main.css}">${2}
 snippet mailto
 	<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${3:email me}</a>
 snippet meta
