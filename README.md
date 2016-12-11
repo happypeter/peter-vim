@@ -20,4 +20,4 @@ If you do web dev a lot...yes
 
 1. Video about how I manage my plugins
 
-   - [vim plugin manage](http://happycasts.net/episodes/30)
+   - [vim plugin manage](http://www.haoduoshipin.com/v/30)
