@@ -241,7 +241,7 @@ let g:auto_save = 1
 
   " Do not know how to use autocmd yet, so the following line not working
   " autocmd FileType text setlocal textwidth=78
-  set textwidth=78
+  " set textwidth=78
 
 
   " get rid of the silly characters in window separators
