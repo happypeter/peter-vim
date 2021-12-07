@@ -34,4 +34,4 @@ If you do web dev a lot...yes
 
 1. Video about how I manage my plugins
 
-   - [vim plugin manage](http://www.haoduoshipin.com/v/30)
+   - [vim plugin manage](https://www.bilibili.com/video/BV1JE411G7M3)
